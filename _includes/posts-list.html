@@ -24,6 +24,13 @@
 		<div class="snippet <snippet-2>">
 			<p>{{ post.content | strip_html | truncatewords:50 }}</p>
 		</div>
+		{% if post.tags %}
+		<div class="panel-inset m0 w100 p8">
+			{% for tags in page.tags %}
+    				<a href="#{{tag}}" class="slot-button-inline">{{ tags }}</span>
+  			{% endfor %}
+		</div>
+		{% endif %}
 	</div>
 </div>
 {% endfor %}
