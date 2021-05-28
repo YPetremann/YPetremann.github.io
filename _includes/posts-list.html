@@ -13,15 +13,12 @@
 
 	<div class="blog-card-text">
 		<h3>
+			{% if post.date %} 
+				<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date: "%Y-%m-%d" }}</time>
+			{% endif %}
 			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			{% if post.author %} - <em>{{ post.author }}</em>{% endif %}
 		</h3>
-		<div class="posted-by">
-			Post
-			{% if post.author %} by <em>{{ post.author }}</em>{% endif %}
-			{% if post.date %} on <time datetime="{{ post.date | date_to_xmlschema }}"
-				class="by-line">{{ post.date | date: "%Y-%m-%d" }}</time>{% endif %}
-		</div>
-		<hr>
 		<div class="snippet <snippet-2>">
 			<p>{{ post.content | strip_html | truncatewords:50 }}</p>
 		</div>
