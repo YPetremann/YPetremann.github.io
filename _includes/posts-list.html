@@ -1,12 +1,11 @@
 {% include pagination.html %}
 {% for post in paginator.posts %}
 <div class="panel-inset-lighter panel-evenodd flex">
+
 	{% if post.image %}
 	<div class="blog-card-thumbnail">
 		<a href="{{ site.baseurl }}{{ post.url }}" class="no-outline">
-
 			<img src="{{ post.image }}">
-
 			<div class="shadow-overlay"></div>
 		</a>
 	</div>
@@ -19,7 +18,6 @@
 		<div class="posted-by">
 			Post
 			{% if post.author %} by <em>{{ post.author }}</em>{% endif %}
-			{% if post.editor %} revised by <em>{{ post.editor }}</em>{% endif %}
 			{% if post.date %} on <time datetime="{{ post.date | date_to_xmlschema }}"
 				class="by-line">{{ post.date | date: "%Y-%m-%d" }}</time>{% endif %}
 		</div>
