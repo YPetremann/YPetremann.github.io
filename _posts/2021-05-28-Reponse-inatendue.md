@@ -1,7 +1,9 @@
 ---
 author: Thaui
 title: "Réponse inatendue."
-tags: Autisme, Couple
+tags: 
+ - Autisme
+ - Couple
 ---
 
 Aujourd'hui je suis allé au GEM, c'est le Groupe d'Entraide Mutuel, comme d'habitude le mercredi après midi c'est activité jeux de société.
