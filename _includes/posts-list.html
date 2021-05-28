@@ -3,27 +3,29 @@
 <div class="panel-inset-lighter flex-column p0">
 	<div class="flex z1">
 		<div class="panel-inset-lighter m0 w100p mr2">
-			{% if post.image %}
-			<div class="blog-card-thumbnail">
-				<a href="{{ site.baseurl }}{{ post.url }}" class="no-outline">
-					<img src="{{ post.image }}">
-					<div class="shadow-overlay"></div>
-				</a>
-			</div>
-			{% endif %}
-
-			<div class="panel-inset-lighter flex-column p0">
-				<h3>
-					<a href="{{ site.baseurl }}{{ post.url }}">
-						{% if post.date %} 
-							<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date: "%Y-%m-%d" }}</time>
-						{% endif %}
-						{{ post.title }}
-						{% if post.author %} - <em>{{ post.author }}</em>{% endif %}
+			<div class="flex">
+				{% if post.image %}
+				<div class="blog-card-thumbnail">
+					<a href="{{ site.baseurl }}{{ post.url }}" class="no-outline">
+						<img src="{{ post.image }}">
+						<div class="shadow-overlay"></div>
 					</a>
-				</h3>
-				<div class="snippet <snippet-2>">
-					<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+				</div>
+				{% endif %}
+				
+				<div>
+					<h3>
+						<a href="{{ site.baseurl }}{{ post.url }}">
+							{% if post.date %} 
+								<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date: "%Y-%m-%d" }}</time>
+							{% endif %}
+							{{ post.title }}
+							{% if post.author %} - <em>{{ post.author }}</em>{% endif %}
+						</a>
+					</h3>
+					<div class="snippet <snippet-2>">
+						<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
