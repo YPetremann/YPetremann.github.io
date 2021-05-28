@@ -10,7 +10,7 @@ layout: default
 	<div class="panel-inset m0 w100 p8">
 		<div class="flex flex-space-between flex-items-center flex-wrap">
 			<div>
-			{% for tag in post.tags %}
+			{% for tag in page.tags %}
 				<a href="#{{tag}}" class="slot-button-inline">{{ tag }}</a>
 			{% endfor %}
 			</div>
