@@ -2,13 +2,19 @@
 layout: default
 ---
 <article class="panel blog-post">
-	<h2>{{ page.title }}</h2>
-	{% if page.author or page.editor or page.date %}
-	<div class="panel-inset mb0">
-		Post
-		{% if page.author %} by <em>{{ page.author }}</em>{% endif %}
-		{% if page.editor %} revised by <em>{{ page.editor }}</em>{% endif %}
-		{% if page.date %} on {{ page.date | date: "%Y-%M-%d" }}{% endif %}
+	<h2>
+		{% if page.date %} {{ page.date | date: "%Y-%M-%d" }} - {% endif %}
+  		{{ page.title }}
+	</h2>
+	{% if page.tags %}
+	<div class="panel-inset m0 w100 p8">
+		<div class="flex flex-space-between flex-items-center flex-wrap">
+			<div>
+			{% for tag in post.tags %}
+				<a href="#{{tag}}" class="slot-button-inline">{{ tag }}</a>
+			{% endfor %}
+			</div>
+		</div>
 	</div>
 	{% endif %}
 	<div class="panel-inset-lighter mt0">
