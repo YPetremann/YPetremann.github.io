@@ -1,7 +1,8 @@
 ---
 author: Thaui
 title: "Un nouveau chapitre"
-tags: Autisme
+tags: 
+ - Autisme
 ---
 
 Aujourd'hui, j'ai reçu mon diagnostic, je vais vous dire comment cela s'est passé
