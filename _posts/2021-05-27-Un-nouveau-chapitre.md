@@ -2,6 +2,7 @@
 author: Thaui
 title: "Un nouveau chapitre"
 tags: 
+ - Introduction du blog
  - Autisme
 ---
 
