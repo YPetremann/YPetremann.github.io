@@ -1,4 +1,15 @@
 {% include pagination.html %}
+<div class="panel-inset">
+  <div class="search-block">
+    <div>
+      <div class="flex flex-wrap flex-center">
+ 	{% for tag in site.tags %}
+        <a href="#{{ tag[0] | slugify }}" class="slot-button-inline">{{ tag[0] }}</a>
+	{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 {% for post in paginator.posts %}
 <div class="panel-inset-lighter flex-column p0">
 	<div class="flex z1">
