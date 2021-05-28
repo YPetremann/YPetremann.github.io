@@ -1,10 +1,8 @@
 ---
 author: Thaui
-title: "Un nouveau départ"
+title: "Un nouveau chapitre"
 tags: Autisme
 ---
-
-# 27 mai 2021 - Un nouveau chapitre
 
 Aujourd'hui, j'ai reçu mon diagnostic, je vais vous dire comment cela s'est passé
 
